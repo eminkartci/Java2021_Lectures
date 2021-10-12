@@ -49,5 +49,29 @@ public class Shape {
         }
 
     }
+
+    public static void draw_triangular(int h,char c){
+
+        // All Rows
+        for(int rowIndex = 0 ; rowIndex < h ; rowIndex++) {
+
+            // ROW
+                // SPACE
+                for(int spaceCount = 0 ; spaceCount < (h-1)-rowIndex ; spaceCount ++){
+                    System.out.print(" ");
+                }
+                // CHAR
+                for (int charCount = 0 ; charCount <= rowIndex ; charCount++){                
+                    System.out.print(c);
+                }
+                // CHAR
+                for (int charCount = 0 ; charCount < rowIndex ; charCount++){                
+                    System.out.print(c);
+                }
+
+            System.out.println();
+        }
+
+    }
     
 }
