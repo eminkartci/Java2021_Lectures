@@ -73,5 +73,22 @@ public class Shape {
         }
 
     }
+
+    public static void draw_rectangular(int h,int l,char c){
+
+        // All Rows
+        for(int rowIndex = 0 ; rowIndex < h ; rowIndex++) {
+
+            // ROW - CHAR
+            for (int charCount = 0 ; charCount < l ; charCount++){                
+                System.out.print(c);
+            }
+                
+            System.out.println();
+        }
+
+    }
+
+    
     
 }
