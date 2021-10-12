@@ -2,6 +2,56 @@ package BasicsProgram;
 
 public class Shape {
 
+    // Attribute
+    String shape;
+    int h,l;
+    char c;
+
+    // Constructor
+    public Shape(String shape){
+        this.shape = shape;
+        this.h = 5;
+        this.l = 5;
+        this.c = 'o';
+    }
+
+        // Triangular
+        public Shape(String shape,int h,char c){
+            this(shape);
+            this.h = h;
+            this.c = c;
+        }
+
+        // Rectangular
+        public Shape(String shape,int h,int l,char c){
+            this(shape);
+            this.h = h;
+            this.l = l;
+            this.c = c;
+        }
+
+    // Behaviour
+    public String toString(){
+        
+        String content = " --- " + this.shape + " ---\n";
+
+        content += "| Height : " + this.h + "\n";
+        content += "| Char   : " + this.c + "\n";
+
+        System.out.println("=== SHAPE "+ this.shape +" ===");
+        if(this.shape.equals("Triangular")){
+            draw_triangular(this.h, this.c);
+        }else if(this.shape.equals("Rectangular")){
+            draw_rectangular(h, l, c);
+        }else if(this.shape.equals("Diamond")){
+            draw_dimond(this.h,this.c);
+        }else{
+            System.out.println("Your shape is not defined in our software !!");
+        }
+
+        return content;
+    }
+
 
 
     public static void draw_left_triangular(int h,char c){
