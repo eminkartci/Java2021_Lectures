@@ -10,7 +10,7 @@ public class Shape {
     // Constructor
     public Shape(String shape){
         this.shape = shape;
-        this.h = 5;
+        this.h = 7;
         this.l = 5;
         this.c = 'o';
     }
@@ -190,7 +190,7 @@ public class Shape {
                 // Char
                 System.out.print(c);
                 //SPACE
-                for(int spaceCount = 0 ; spaceCount < (h-3)-2*rowIndex ; spaceCount ++){
+                for(int spaceCount = 0 ; spaceCount < (h-4)-2*rowIndex ; spaceCount ++){
                     System.out.print(" ");
                 }
                 if (rowIndex != lowerH-1){
