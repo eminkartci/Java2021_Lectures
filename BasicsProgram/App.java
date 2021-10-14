@@ -8,7 +8,6 @@ public class App{
     }
 
     public static Shape createShape(String userShapeStr){
-        
         Shape userShape = new Shape(userShapeStr);
         return userShape;
     }
