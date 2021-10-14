@@ -46,8 +46,8 @@ public class IndexStudy {
                 result[i] = result[i-1] + result[i-2] + result[i-3];
             }
 
-            for(double x: result){
-                System.out.print(x + " ");
+            for(int i = 0 ; i < result.length ; i++){
+                System.out.print(result[i] + " ");
             }
         }
 
