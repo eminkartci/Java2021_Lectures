@@ -1,4 +1,8 @@
 package BasicsProgram;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Shape {
 
@@ -18,15 +22,21 @@ public class Shape {
         // Triangular
         public Shape(String shape,int h,char c){
             this(shape);
-            this.h = h;
+            if(h>0){
+                this.h = h;
+            }
             this.c = c;
         }
 
         // Rectangular
         public Shape(String shape,int h,int l,char c){
             this(shape);
-            this.h = h;
-            this.l = l;
+            if(h>0){
+                this.h = h;
+            }
+            if(l>0){
+                this.l = l;
+            }
             this.c = c;
         }
 
@@ -124,6 +134,50 @@ public class Shape {
 
     }
 
+    public String triangularStr(){
+
+        String result = "";
+        // All Rows
+        for(int rowIndex = 0 ; rowIndex < h ; rowIndex++) {
+
+            // ROW
+                // SPACE
+                for(int spaceCount = 0 ; spaceCount < (h-1)-rowIndex ; spaceCount ++){
+                    result+=" ";
+                }
+                // CHAR
+                for (int charCount = 0 ; charCount <= rowIndex ; charCount++){                
+                    result+=c;
+                }
+                // CHAR
+                for (int charCount = 0 ; charCount < rowIndex ; charCount++){                
+                    result+=c;
+                }
+
+                result+="\n";
+        }
+
+        return result;
+
+    }
+
+    public static void save_str(String s,String path){
+
+        
+        try {
+
+            BufferedWriter bf = new BufferedWriter(new FileWriter(new File(path + ".txt")));
+
+            bf.write(s);
+            bf.close();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+
     public static void draw_rectangular(int h,int l,char c){
 
         // All Rows
@@ -200,7 +254,5 @@ public class Shape {
         }
 
     }
-
-    
     
 }

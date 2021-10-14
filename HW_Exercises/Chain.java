@@ -3,7 +3,7 @@ package HW_Exercises;
 public class Chain {
 
     public static void main(String[] args) {
-        
+
         if(args.length != 3){
             System.out.println("There has to be exactly three numbers");
         }else{
@@ -13,7 +13,6 @@ public class Chain {
                 System.out.println("Please provide double values only !!");
             }
         }
-
 
     }
 
