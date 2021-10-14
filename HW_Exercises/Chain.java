@@ -5,7 +5,7 @@ public class Chain {
     public static void main(String[] args) {
         
         if(args.length != 3){
-            System.out.println("Please provide 3 double values !!");
+            System.out.println("There has to be exactly three numbers");
         }else{
             try{
                 chain(Double.parseDouble(args[0]), Double.parseDouble(args[1]), Double.parseDouble(args[2]));
