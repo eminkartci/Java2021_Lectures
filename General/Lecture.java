@@ -8,11 +8,18 @@ public class Lecture{
         Person p1 = new Person("Emin",22);
         System.out.println(p1);
 
+        Lecture l1 = new Lecture("IE246 Course", p1);
+
+        l1.add_student(new Person("Kağan", 20));
+        l1.add_student(new Person("Beril", 21));
+        l1.add_student(new Person("Merve", 22));
+
     }
 
     // Attribute
     String name;
     Person lecturer;
+    Person[] students = new Person[20];
 
     // Constructor
     public Lecture(String name,Person lecturer){
@@ -21,7 +28,15 @@ public class Lecture{
     }
 
     // Behaviour
+    public void add_student(Person student){
 
+        for(int i = 0 ; i < this.students.length ; i++){
+            if(this.students[i] == null){
+                this.students[i] = student;
+            }
+        }
+
+    }
 
     
 }
