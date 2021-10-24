@@ -6,7 +6,6 @@ public class Lecture{
     public static void main(String[] args) {
         
         Person p1 = new Person("Emin",22);
-
         System.out.println(p1);
 
     }
@@ -16,6 +15,10 @@ public class Lecture{
     Person lecturer;
 
     // Constructor
+    public Lecture(String name,Person lecturer){
+        this.name = name;
+        this.lecturer = lecturer;
+    }
 
     // Behaviour
 
